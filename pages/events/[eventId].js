@@ -20,9 +20,9 @@ function EventDetailsPage() {
         date={event.date}
         address={event.location}
         image={event.image}
-        imageAlt={event.imageAlt}
+        imageAlt={event.title}
       />
-      <EventContent test={event.description}>
+      <EventContent text={event.description}>
         <p>{event.description}</p>
       </EventContent>
     </Fragment>

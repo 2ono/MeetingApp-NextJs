@@ -8,7 +8,7 @@ function EventLogistics(props) {
 
     
   
-    const humanReadableDate = new Date(date).toLocaleDateString('en-US', {
+    const humanReadableDate = new Date(date).toLocaleDateString("ko-KR", {
       day: 'numeric',
       month: 'long',
       year: 'numeric',

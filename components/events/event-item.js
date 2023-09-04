@@ -13,6 +13,9 @@ function EventItem(props) {
     month: "long",
     year: "numeric",
   });
+  if (!location) {
+    return 'errors'
+  }
 
   const formattedAddress = location.replace(", ", "\n");
 

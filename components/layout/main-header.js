@@ -4,7 +4,7 @@ function MainHeader() {
   return (
     <header className={classes.header}>
       <div className={classes.logo}>
-        <Link href={"/"}>모임 커뮤니티</Link>
+        <Link href={"/"}>번개방</Link>
       </div>
       <na>
         <ul>

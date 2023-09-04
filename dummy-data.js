@@ -1,11 +1,13 @@
+
+
 const DUMMY_EVENTS = [
     {
       id: 'e1',
       title: '행복한 애견인 모임',
       description:
         '애견인 애묘인 모임입니다. 자유로운 게시 해주세요 종에 상관없이 모두모두 행복해하는 세상이 오길 바랍니다',
-      location: '경기도, 안양시, 동안구, 관악대로287번길, 76-6(관양동)',
-      date: '2023-11-12',
+      location: '경상남도, 안양시, 동안구, 관악대로287번길, 76-6(관양동)',
+      date: '2024-10-30',
       image: 'images/dogs.jpg',
       isFeatured: false,
     },
@@ -33,7 +35,8 @@ const DUMMY_EVENTS = [
         id: 'e4',
         title: '중년 등산 모임',
         description: 'MZ 등산 모임 3GO crew 입니다두번째 해를 맞이한 3GO 시즌 2는초보, 고수를 가리지 않고빠르게 더 높은 더 많은 산을 타는 것이 아닌함께 즐거운 산행을 하는 것이 좋아요.',
-        date: '2024-02-09',
+        location: '부산시, 해운대구, 만산읍, 청수산로, 622-8',
+        date: '2024-01-09',
         image: 'images/mountains.jpg',
         isFeatured: false,
       },
@@ -43,11 +46,12 @@ const DUMMY_EVENTS = [
         description:
           '달리기 소모임 러닝크루 다이어트보다 건강하게 잘 살고 싶어서 운동에 관심만 있다면 누구라도 참여할 수 있다며 모임의 깨알홍보도 잊지 않았다.',
         location: '강원도, 양양군, 손양면, 방우재길, 38-48',
-        date: '2024-05-12',
+        date: '2023-01-12',
         image: 'images/runnings.jpg',
         isFeatured: true,
       },
   ];
+
   
   export function getFeaturedEvents() {
     return DUMMY_EVENTS.filter((event) => event.isFeatured);

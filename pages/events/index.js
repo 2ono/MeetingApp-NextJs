@@ -17,8 +17,8 @@ function AllEventsPage() {
 
   return (
     <Fragment>
-    <NewsletterRegistration />
       <EventsSearch onSearch={findEventHandler} />
+    <NewsletterRegistration />
       <EventList items={events} />
     </Fragment>
   );

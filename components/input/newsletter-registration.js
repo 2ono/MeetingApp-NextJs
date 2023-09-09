@@ -18,22 +18,7 @@ function NewsletterRegistration() {
       }
     }).then(response => response.json()).then(data => console.log(data))
 
-    // fetch user input (state or refs)
-    // optional: validate input
-    // send valid data to API
-    // const datas = inputRef.current.value;
-    // console.log(data);
 
-    //   const requestOptions = {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify({ title: 'React POST Request Example' })
-    // };
-    // fetch('/api/newsletter', requestOptions)
-    //     .then(response => response.json())
-    //     .then(data => setText({ email : data.datas }));
-
-    // return text;
   }
 
   return (

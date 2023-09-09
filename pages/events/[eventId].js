@@ -5,6 +5,7 @@ import EventSummary from "@/components/event-detail/event-summary";
 import EventLogistics from "@/components/event-detail/event-logistics";
 import EventContent from "@/components/event-detail/event-content";
 import ErrorAlert from "@/components/ui/error-alert";
+import Comments from "@/components/input/comments";
 
 function EventDetailsPage() {
   const router = useRouter();
@@ -20,6 +21,7 @@ function EventDetailsPage() {
 
   return (
     <Fragment>
+
       <EventSummary title={event.title} image={event.image} />
       <EventLogistics
         date={event.date}
@@ -30,6 +32,7 @@ function EventDetailsPage() {
       <EventContent text={event.description}>
         <p>{event.description}</p>
       </EventContent>
+      <Comments eventId={eventId} />
     </Fragment>
   );
 }

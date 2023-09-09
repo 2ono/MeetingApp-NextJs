@@ -16,7 +16,7 @@ function Comments(props) {
       fetch("/api/comments/" + eventId)
         .then((response) => response.json())
         .then((data) => {
-          setComments(data.comment);
+          setComments(data.comments);
         });
     }
   }, [showComments]);
@@ -24,8 +24,6 @@ function Comments(props) {
   function toggleCommentsHandler() {
     setShowComments((prevStatus) => !prevStatus);
 
-    if (!showComments) {
-    }
   }
 
   function addCommentHandler(commentData) {

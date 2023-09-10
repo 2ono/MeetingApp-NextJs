@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import EventList from "@/components/events/event-list";
 import EventsSearch from "@/components/events/events-search";
 import NewsletterRegistration from "@/components/input/newsletter-registration";
-
+import Notification from "@/components/ui/notification";
 function AllEventsPage() {
   const events = getAllEvents();
 
@@ -15,11 +15,13 @@ function AllEventsPage() {
     router.push(fullPath);
   }
 
+
   return (
     <Fragment>
       <EventsSearch onSearch={findEventHandler} />
     <NewsletterRegistration />
       <EventList items={events} />
+     
     </Fragment>
   );
 }

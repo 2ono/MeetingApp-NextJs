@@ -6,8 +6,15 @@ import EventLogistics from "@/components/event-detail/event-logistics";
 import EventContent from "@/components/event-detail/event-content";
 import ErrorAlert from "@/components/ui/error-alert";
 import Comments from "@/components/input/comments";
+import Notification from "@/components/ui/notification";
+import { useContext } from "react";
+import NotificationContext from "@/store/notification-context";
 
 function EventDetailsPage() {
+  const notificationCtx = useContext(NotificationContext);
+
+  const activeNotification = notificationCtx.notification;
+
   const router = useRouter();
   const eventId = router.query.eventId;
   const event = getEventById(eventId);
@@ -21,7 +28,6 @@ function EventDetailsPage() {
 
   return (
     <Fragment>
-
       <EventSummary title={event.title} image={event.image} />
       <EventLogistics
         date={event.date}
@@ -33,6 +39,13 @@ function EventDetailsPage() {
         <p>{event.description}</p>
       </EventContent>
       <Comments eventId={eventId} />
+      {activeNotification && (
+        <Notification
+          title={activeNotification.title}
+          message={activeNotification.message}
+          status={activeNotification.status}
+        />
+      )}
     </Fragment>
   );
 }
